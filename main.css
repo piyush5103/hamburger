@@ -1,0 +1,273 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+        display: none;
+    }
+
+    .respnavmenuouter {
+        width: 100%;
+        background-color: black;
+    }
+}
+
+@media screen and (min-width: 999px) {
+    .respnavmenuouter {
+        display: none;
+    }
+}
+
+.nav {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navlist {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.navitem {
+    display: flex;
+    background-color: black;
+    transition-duration: 0.22s;
+    width: 100%;
+    justify-content: center;
+}
+.navitem-first-tba {
+    display: flex;
+    background-color: black;
+    transition-duration: 0.22s;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.navlink {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: white;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    flex: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.navitem:hover {
+    background-color: #ED1C24;
+}
+.navitem-first-tba:hover {
+    background-color: blue;
+}
+
+
+.resp-navlink {
+    text-decoration: none;
+    color: white;
+
+    transition: color 0.3s ease;
+}
+
+.resp-navlink:hover {
+    color: #ED1C24;
+}
+
+#navmenuToggle {
+    display: block;
+    position: relative;
+    top: 20px;
+    margin-left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#navmenuToggle .hb {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    z-index: 2;
+
+    -webkit-touch-callout: none;
+}
+
+
+#navmenuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: white;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#navmenuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#navmenuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+
+#navmenuToggle .hb:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: white;
+}
+
+#navmenuToggle .hb:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#navmenuToggle .hb:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu {
+    position: absolute;
+    width: 100%;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: black;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+
+#navmenuToggle .hb:checked ~ ul {
+    transform: none;
+}
+
+
+.title-block {
+	width: 100%;
+}
+
+.title-block-inner {
+	padding: 15px 0 44px;
+}
+
+
+.footer {
+    width: 100%;
+}
+
+.footer-inner {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icons {
+    display: inherit;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
+}
+
+.first-logo {
+    display: inherit;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.img-first-logo {
+    height: 42.5px;
+}
+
+.social-links {
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 32px;
+    transition-duration: 0.26s;
+}
+
+.social-links:hover {
+    opacity: 55%;
+}
+
+.copyright {
+    width: 100%;
+    display: inherit;
+    justify-content: center;
+}
+
+.p-copyright {
+    font-size: 16px;
+    letter-spacing: 0.26px;
+    line-height: 1.7em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #73777F;
+    font-family: 'Noto Serif', serif;
+}
+
+.fb-icon {
+    color: #4267B2;
+}
+
+.in-icon {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tw-icon {
+    color: #3dbfe8;
+}
+
+.respnavmenuouter {
+    padding-bottom: 35px;
+}
